@@ -17,11 +17,12 @@ const DefaultRouter: Array<RouteObject> = [
         ],
       },
       // For pages with different layout create a child here
+      // Not Found Route - 404
+      {
+        path: '*',
+        lazy: () => import('@pages/NotFound/Component'),
+      },
     ],
-  },
-  {
-    path: '*',
-    lazy: () => import('@pages/NotFound/Component'),
   },
 ];
 

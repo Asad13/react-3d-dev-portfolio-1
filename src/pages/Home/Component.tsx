@@ -1,5 +1,12 @@
+import Head from '@components/common/Head';
+
 export const Component = () => {
-  return <div>Home</div>;
+  return (
+    <>
+      <Head title="Home" />
+      <div>Home</div>
+    </>
+  );
 };
 
 Component.displayName = 'HomePage';
