@@ -14,6 +14,18 @@ const DefaultRouter: Array<RouteObject> = [
             path: '/',
             lazy: () => import('@pages/Home/Component'),
           },
+          {
+            path: '/about',
+            lazy: () => import('@pages/About/Component'),
+          },
+          {
+            path: '/contact',
+            lazy: () => import('@pages/Contact/Component'),
+          },
+          {
+            path: '/projects',
+            lazy: () => import('@pages/Projects/Component'),
+          },
         ],
       },
       // For pages with different layout create a child here
