@@ -7,6 +7,7 @@ import path from 'path';
 export default defineConfig(() => {
   return {
     plugins: [react(), tailwindcss()],
+    assetsInclude: ['**/*.glb'],
     resolve: {
       alias: {
         '@src': path.resolve('src'),

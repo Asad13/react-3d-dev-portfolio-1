@@ -23,11 +23,16 @@
     "react",
     "three.js",
     "@react-three/fiber",
+    "@react-three/drei",
+    "@react-spring/fiber",
     "tailwindcss",
     "portfolio"
   ],
-  "packageManager": "pnpm@9.15.4",
+  "packageManager": "pnpm@10.2.0",
   "dependencies": {
+    "@react-spring/three": "^9.7.5",
+    "@react-three/drei": "^9.121.4",
+    "@react-three/fiber": "^8.17.14",
     "@tailwindcss/vite": "^4.0.2",
     "clsx": "^2.1.1",
     "install": "^0.13.0",
@@ -35,7 +40,8 @@
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
     "react-router": "^7.1.5",
-    "tailwindcss": "^4.0.2"
+    "tailwindcss": "^4.0.2",
+    "three": "^0.173.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
@@ -43,6 +49,7 @@
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@types/react-helmet": "^6.1.11",
+    "@types/three": "^0.173.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "eslint": "^9.17.0",
     "eslint-config-prettier": "^10.0.1",
