@@ -30,12 +30,13 @@
   .loader-container {
     @apply absolute top-0 left-0 z-20;
     @apply flex h-full w-full items-center justify-center;
-    @apply bg-[rgb(18,18,18)] opacity-50 dark:bg-[rgb(255,255,255)];
+    /* @apply bg-[rgb(18,18,18)] opacity-50 dark:bg-[rgb(255,255,255)]; */
 
     .loader {
-      @apply relative inline-block h-12 w-12;
+      @apply relative inline-block h-20 w-20;
       @apply animate-spin rounded-full;
-      @apply border-[6px] border-dotted border-[#121212] dark:border-[#FFFFFF];
+      /* @apply border-[6px] border-dotted border-[#121212] dark:border-[#FFFFFF]; */
+      @apply border-4 border-dotted border-blue-500;
     }
   }
 
