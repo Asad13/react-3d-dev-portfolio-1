@@ -6,7 +6,7 @@ import type { Group, BufferGeometry, Material, Skeleton } from 'three';
 import { GLTF } from 'three/examples/jsm/Addons.js';
 
 interface FoxProps extends GroupProps {
-  currentAnimation: 'idle' | 'walk';
+  currentAnimation: 'idle' | 'walk' | 'hit';
 }
 
 type FoxGLTF = GLTF & {

@@ -5,7 +5,7 @@ type Alert = {
 
 const Alert = ({ type, text }: Alert) => {
   return (
-    <div className="absolute top-10 right-0 left-0 flex items-center justify-center">
+    <div className="fixed top-10 right-0 left-0 z-20 flex items-center justify-center">
       <div
         className={`p-2 ${
           type === 'danger' ? 'bg-red-800' : 'bg-blue-800'

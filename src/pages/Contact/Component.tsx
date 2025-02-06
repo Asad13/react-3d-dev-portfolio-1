@@ -16,9 +16,9 @@ export const Component = () => {
   const { alert, showAlert, hideAlert } = useAlert();
   const formRef = useRef<HTMLFormElement>(null);
   const [loading, setLoading] = useState(false);
-  const [currentAnimation, setCurrentAnimation] = useState<'idle' | 'walk'>(
-    'idle',
-  );
+  const [currentAnimation, setCurrentAnimation] = useState<
+    'idle' | 'walk' | 'hit'
+  >('idle');
 
   const handleFocus = () => setCurrentAnimation('walk');
   const handleBlur = () => setCurrentAnimation('idle');
@@ -26,6 +26,7 @@ export const Component = () => {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     setLoading(true);
+    setCurrentAnimation('hit');
 
     if (formRef.current != null) {
       emailjs
@@ -42,10 +43,10 @@ export const Component = () => {
               text: 'Thank you for your message 😃',
               type: 'success',
             });
-            setCurrentAnimation('idle');
 
             setTimeout(() => {
               hideAlert();
+              setCurrentAnimation('idle');
               navigate(0);
             }, 3000);
           },
