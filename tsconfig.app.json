@@ -40,7 +40,7 @@
       "@store/*": ["src/store/*"],
       "@services/*": ["src/services/*"],
       "@utils/*": ["src/utils/*"],
-      "@types/*": ["src/types/*"]
+      "@apptypes/*": ["src/types/*"]
     }
   },
   "include": ["src"]

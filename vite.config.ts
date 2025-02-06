@@ -8,6 +8,9 @@ export default defineConfig(() => {
   return {
     plugins: [react(), tailwindcss()],
     assetsInclude: ['**/*.glb'],
+    server: {
+      allowedHosts: ['intimate-seasnail-infinitely.ngrok-free.app'],
+    },
     resolve: {
       alias: {
         '@src': path.resolve('src'),
@@ -25,7 +28,7 @@ export default defineConfig(() => {
         '@store': path.resolve('src/store'),
         '@services': path.resolve('src/services'),
         '@utils': path.resolve('src/utils'),
-        '@types': path.resolve('src/types'),
+        '@apptypes': path.resolve('src/types'),
       },
     },
   };
