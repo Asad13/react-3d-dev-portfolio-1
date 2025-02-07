@@ -1,7 +1,9 @@
 import { meta, shopify, starbucks, tesla } from '@assets/images';
 import {
+  car,
   contact,
   css,
+  estate,
   express,
   git,
   github,
@@ -13,10 +15,14 @@ import {
   mui,
   nextjs,
   nodejs,
+  pricewise,
   react,
   redux,
   sass,
+  snapgram,
+  summiz,
   tailwindcss,
+  threads,
   typescript,
 } from '@assets/icons';
 
@@ -173,5 +179,56 @@ export const socialLinks = [
     name: 'LinkedIn',
     iconUrl: linkedin,
     link: 'https://www.linkedin.com/in/asadmujumder',
+  },
+];
+
+export const projects = [
+  {
+    iconUrl: pricewise,
+    theme: 'btn-back-red',
+    name: 'API for Football/Soccer Data',
+    description:
+      'API for getting Football News, Results, Fixtures, Standings and Live Match Data for Selected Leagues in England.',
+    link: 'https://github.com/Asad13/sports-api',
+  },
+  {
+    iconUrl: threads,
+    theme: 'btn-back-green',
+    name: 'Ecommerce With Admin Dashboard',
+    description:
+      'Built a full-stack eCommerce platform using Next.js, featuring an admin dashboard for managing products, orders, users, and analytics in real-time.',
+    link: 'https://github.com/Asad13/nextjs-ecommerce-with-admin-dashboard',
+  },
+  {
+    iconUrl: car,
+    theme: 'btn-back-blue',
+    name: 'AI Prompt Creator',
+    description:
+      'Developed an AI-powered prompt generation tool with Next.js, allowing users to create, save, and refine prompts for AI models with an intuitive UI.',
+    link: 'https://github.com/Asad13/nextjs-ai-prompt-creator',
+  },
+  {
+    iconUrl: snapgram,
+    theme: 'btn-back-pink',
+    name: 'Social Media App - Frontend',
+    description:
+      'Designed and built a dynamic social media frontend using React, enabling users to browse feeds, post updates, and interact seamlessly.',
+    link: 'https://github.com/Asad13/memories-frontend',
+  },
+  {
+    iconUrl: estate,
+    theme: 'btn-back-black',
+    name: 'Social Media App - Backend',
+    description:
+      'Developed a scalable backend for a social media app using Express.js, implementing user authentication, real-time notifications, and database management.',
+    link: 'https://github.com/Asad13/social-media-app-backend',
+  },
+  {
+    iconUrl: summiz,
+    theme: 'btn-back-yellow',
+    name: 'Coffee Shop Mobile App',
+    description:
+      'Created a cross-platform coffee shop app using React Native, allowing users to browse menus, place orders, and track deliveries with an intuitive mobile UI.',
+    link: 'https://github.com/Asad13/react-native-coffee-shop-app',
   },
 ];
