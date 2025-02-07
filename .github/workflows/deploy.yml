@@ -11,16 +11,18 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 22.13.1
-          cache: 'pnpm'
+        uses: actions/checkout@v4
 
       - name: Install pnpm
-        run: corepack enable && corepack prepare pnpm@latest --activate
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
 
       - name: Install Dependencies
         run: pnpm install
