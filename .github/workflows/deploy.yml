@@ -30,15 +30,20 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
-      - name: Set Up Environment Variables
-        run: |
-          echo "VITE_APP_BASE_PATH=/react-3d-dev-portfolio-1/" >> .env
-          echo "VITE_APP_EMAILJS_SERVICE_ID=${{ secrets.VITE_APP_EMAILJS_SERVICE_ID }}" >> .env
-          echo "VITE_APP_EMAILJS_TEMPLATE_ID=${{ secrets.VITE_APP_EMAILJS_TEMPLATE_ID }}" >> .env
-          echo "VITE_APP_EMAILJS_PUBLIC_KEY=${{ secrets.VITE_APP_EMAILJS_PUBLIC_KEY }}" >> .env
+      # - name: Set Up Environment Variables
+      #   run: |
+      #     echo "VITE_APP_BASE_PATH=/react-3d-dev-portfolio-1/" >> .env
+      #     echo "VITE_APP_EMAILJS_SERVICE_ID=${{ secrets.VITE_APP_EMAILJS_SERVICE_ID }}" >> .env
+      #     echo "VITE_APP_EMAILJS_TEMPLATE_ID=${{ secrets.VITE_APP_EMAILJS_TEMPLATE_ID }}" >> .env
+      #     echo "VITE_APP_EMAILJS_PUBLIC_KEY=${{ secrets.VITE_APP_EMAILJS_PUBLIC_KEY }}" >> .env
 
       - name: Build Project
-        run: pnpm run build
+        run: |
+          VITE_APP_BASE_PATH="/react-3d-dev-portfolio-1/" \
+          VITE_APP_EMAILJS_SERVICE_ID="${{ secrets.VITE_APP_EMAILJS_SERVICE_ID }}" \
+          VITE_APP_EMAILJS_TEMPLATE_ID="${{ secrets.VITE_APP_EMAILJS_TEMPLATE_ID }}" \
+          VITE_APP_EMAILJS_PUBLIC_KEY="${{ secrets.VITE_APP_EMAILJS_PUBLIC_KEY }}" \
+          pnpm run build
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
