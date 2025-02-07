@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 22.13.1
-          cache: 'pnpm'
+          cache: 'npm'
 
       - name: Install pnpm
         run: npm install -g pnpm
@@ -27,6 +27,7 @@ jobs:
 
       - name: Set Up Environment Variables
         run: |
+          echo "VITE_APP_BASE_PATH=/react-3d-dev-portfolio-1/" >> .env
           echo "VITE_APP_EMAILJS_SERVICE_ID=${{ secrets.VITE_APP_EMAILJS_SERVICE_ID }}" >> .env
           echo "VITE_APP_EMAILJS_TEMPLATE_ID=${{ secrets.VITE_APP_EMAILJS_TEMPLATE_ID }}" >> .env
           echo "VITE_APP_EMAILJS_PUBLIC_KEY=${{ secrets.VITE_APP_EMAILJS_PUBLIC_KEY }}" >> .env
