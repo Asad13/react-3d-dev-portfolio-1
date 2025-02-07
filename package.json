@@ -2,7 +2,7 @@
   "name": "react-3d-dev-portfolio-1",
   "private": true,
   "version": "0.0.1",
-  "homepage": "https://asad13.github.io/react-3d-dev-portfolio-1",
+  "homepage": "https://asad13.github.io/react-3d-dev-portfolio-1/",
   "type": "module",
   "description": "A simple dev 3d portfolio website using React, Three.js, React Three Fiber, and TailwindCss.",
   "repository": {
