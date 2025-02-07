@@ -10,8 +10,16 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react(), tailwindcss()],
-    base: env.VITE_APP_BASE_PATH ?? '/',
     assetsInclude: ['**/*.glb'],
+    base: env.VITE_APP_BASE_PATH ?? '/',
+    build: {
+      rollupOptions: {
+        input: {
+          main: 'index.html',
+          notFound: '404.html', // Ensures fallback to index.html
+        },
+      },
+    },
     server: {
       allowedHosts: ['intimate-seasnail-infinitely.ngrok-free.app'],
     },
