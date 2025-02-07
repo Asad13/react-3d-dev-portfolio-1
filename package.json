@@ -41,6 +41,7 @@
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
     "react-router": "^7.1.5",
+    "react-vertical-timeline-component": "^3.5.3",
     "tailwindcss": "^4.0.2",
     "three": "^0.173.0"
   },
@@ -50,6 +51,7 @@
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@types/react-helmet": "^6.1.11",
+    "@types/react-vertical-timeline-component": "^3.3.6",
     "@types/three": "^0.173.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "eslint": "^9.17.0",
