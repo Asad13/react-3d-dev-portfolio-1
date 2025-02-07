@@ -47,7 +47,10 @@ export const Component = () => {
             setTimeout(() => {
               hideAlert();
               setCurrentAnimation('idle');
-              navigate(0);
+              if (!window.location.href.includes('asad13.github.io')) {
+                // For Github Action
+                navigate(0);
+              }
             }, 3000);
           },
           (error) => {
