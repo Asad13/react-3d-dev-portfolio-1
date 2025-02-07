@@ -7,6 +7,7 @@ import path from 'path';
 export default defineConfig(() => {
   return {
     plugins: [react(), tailwindcss()],
+    base: '/react-3d-dev-portfolio-1',
     assetsInclude: ['**/*.glb'],
     server: {
       allowedHosts: ['intimate-seasnail-infinitely.ngrok-free.app'],
